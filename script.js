@@ -5,6 +5,7 @@ function adicionar() {
     let idade = document.getElementById("idadeConvidado").value
     let email = document.getElementById("emailConvidado").value
 
+
     if (nome == "") {
         alert("Preencha o nome do Convidado")
     } else
@@ -16,6 +17,7 @@ function adicionar() {
     } else {
         nomesConvidados.push({ nome, idade, email })
         atualizarLista()
+        document.getElementById("imagem").src = "img/logotipo.png"
     }
 }
 
@@ -35,4 +37,11 @@ function atualizarLista() {
     lista.scrollTop = lista.scrollHeight - lista.clientHeight;
 
 
+}
+
+function limpar() {
+    let lista = document.getElementById("divLista")
+    lista.innerHTML = ""
+    nomesConvidados = []
+    document.getElementById("imagem").src = "img/logotipo1.png"
 }

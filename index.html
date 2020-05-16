@@ -10,14 +10,21 @@
 </head>
 
 <body>
+    <div>
+        <img id="imagem" src="img/logotipo1.png" alt="logo">
+    </div>
     <form class="formulario">
-        <h1>Lista de Convidados</h1>
+        <h1>Lista de Convidados da Val</h1>
 
         <div class="divConvidado">
             <input id="nomeConvidado" type="text" placeholder="Nome do Convidado">
             <input id="idadeConvidado" type="number" placeholder="Idade">
             <input id="emailConvidado" type="Email" placeholder="Email">
-            <button onclick="adicionar()" type="button">Adicionar</button>
+            <div class="div-botoes">
+                <button onclick="limpar()" type="button">Limpar Dados</button>
+                <button onclick="adicionar()" type="reset">Adicionar</button>
+
+            </div>
         </div>
     </form>
     <section>
