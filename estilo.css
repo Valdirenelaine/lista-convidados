@@ -9,7 +9,7 @@ body {
 
 img {
     margin: auto;
-    width: 10%;
+    width: 13%;
     min-width: 30px;
 }
 
@@ -49,6 +49,7 @@ legend {
 #divLista {
     margin: auto;
     height: 100px;
+    min-width: 300px;
     overflow: auto;
 }
 
