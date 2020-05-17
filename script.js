@@ -15,9 +15,10 @@ function adicionar() {
     if (email == "") {
         alert("Preencha o email do Convidado")
     } else {
+        document.getElementById("imagem").src = "img/logotipo.png"
         nomesConvidados.push({ nome, idade, email })
         atualizarLista()
-        document.getElementById("imagem").src = "img/logotipo.png"
+
     }
 }
 
@@ -40,8 +41,9 @@ function atualizarLista() {
 }
 
 function limpar() {
+    document.getElementById("imagem").src = "img/logotipo1.png"
     let lista = document.getElementById("divLista")
     lista.innerHTML = ""
     nomesConvidados = []
-    document.getElementById("imagem").src = "img/logotipo1.png"
+
 }
