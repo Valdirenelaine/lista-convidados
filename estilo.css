@@ -17,6 +17,7 @@ h1 {
     font-weight: lighter;
     text-align: center;
     margin: 20px;
+    min-width: 300px;
     font-family: cursive;
 }
 
