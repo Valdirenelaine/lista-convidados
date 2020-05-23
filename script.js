@@ -56,6 +56,8 @@ function remover(i) {
 
 function limpar() {
     let lista = document.getElementById("divLista")
+    let tabela = document.getElementById("tabela")
+    tabela.style.visibility = "hidden"
     lista.innerHTML = ""
     nomesConvidados = []
 
