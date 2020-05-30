@@ -11,16 +11,17 @@
 
 <body>
     <h1 class="text-center my-4">Lista de Convidados</h1>
+    <section id="erros" class="row justify-content-center"></section>
     <form>
 
         <div class="row justify-content-center">
-            <div class="card col-9 col-sm-6 p-5">
+            <div class="card col col-10 col-sm-8 col-md-6 p-5">
                 <input id="nomeConvidado" class="form-control mb-2" type="text" placeholder="Nome do Convidado">
                 <input id="idadeConvidado" class="form-control mb-2" type="number" placeholder="Idade">
                 <input id="emailConvidado" class="form-control mb-2" type="Email" placeholder="Email">
                 <div class="d-flex justify-content-end">
                     <button class="btn btn-outline-danger m-1" onclick="limpar()" type="button">Limpar Dados</button>
-                    <button class="btn btn-success m-1" onclick="adicionar()" type="reset">Adicionar</button>
+                    <button class="btn btn-success m-1" onclick="salvar()" type="reset">Salvar</button>
                 </div>
 
             </div>
@@ -28,13 +29,13 @@
     </form>
     <section id="tabela" class="row justify-content-center overflow-auto mt-3" style="height:180px">
 
-        <table class="table col-9 col-sm-6 table-dark">
+        <table class="table col col-10 col-sm-8 col-md-6 table-dark">
             <thead>
                 <th scope="col">#</th>
                 <th scope="col">Nome</th>
                 <th scope="col">Idade</th>
                 <th scope="col">Email</th>
-                <th scope="col">Remover</th>
+                <th scope="col">Ações</th>
             </thead>
             <tbody id="divLista">
 
