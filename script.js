@@ -9,7 +9,7 @@ function salvar() {
     let valido = true
 
     if (!nome) {
-        erros.push("O mome é obrigatório")
+        erros.push("O nome é obrigatório")
         valido = false
     }
     if (!idade) {
