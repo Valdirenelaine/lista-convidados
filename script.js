@@ -59,6 +59,9 @@ function limparFormulario() {
     document.getElementById("nomeConvidado").value = ""
     document.getElementById("idadeConvidado").value = ""
     document.getElementById("emailConvidado").value = ""
+    let secaoErros = document.getElementById("erros")
+    secaoErros.innerHTML = ""
+    erros = []
 
 }
 
