@@ -42,7 +42,6 @@ function exibirErros() {
     let secaoErros = document.getElementById("erros")
     secaoErros.innerHTML = ""
     erros.forEach(e => {
-
         secaoErros.innerHTML = secaoErros.innerHTML += `
                 <div class="col col-7 alert alert-danger alert-dismissible fade show" role="alert">
                     ${e}
@@ -68,24 +67,23 @@ function atualizarLista() {
     let tabela = document.getElementById("tabela")
     lista.innerHTML = ""
 
-    for (let i = 0; i < nomesConvidados.length; i++) {
+    nomesConvidados.forEach((convidado, i) => {
         tabela.style.visibility = "visible"
-        lista.innerHTML = lista.innerHTML + `<tr>
-                           <td> ${i}</td>  
-                           <td> ${nomesConvidados[i].nome}</td>  
-                           <td> ${nomesConvidados[i].idade} </td>
-                           <td> ${nomesConvidados[i].email}</td>    
-                           <td> 
-                           <button onclick="editar(${i})" class="btn btn-link">
-                           <img src="img/pencil.svg" width ="30px" alt="icone editar">
-                          </button> 
-                             <button onclick="remover(${i})" class="btn btn-link">
-                                <img src="img/trash.svg" width ="30px" alt="icone lixeira">
-                             </button> 
-                           </td>    
-                           </tr>`
-    }
-
+        lista.innerHTML = lista.innerHTML + `<tr> 
+                                             <td>${i}</td>   
+                                             <td>${convidado.nome}</td>           
+                                             <td>${convidado.idade}</td>
+                                             <td>${convidado.email}</td>
+                                             <td> 
+                                             <button onclick="editar(${i})" class="btn btn-link">
+                                             <img src="img/pencil.svg" width ="30px" alt="icone editar">
+                                            </button> 
+                                               <button onclick="remover(${i})" class="btn btn-link">
+                                                  <img src="img/trash.svg" width ="30px" alt="icone lixeira">
+                                               </button> 
+                                             </td>    
+                                            </tr>`
+    });
     lista.scrollTop = lista.scrollHeight - lista.clientHeight;
 
 
