@@ -1,5 +1,6 @@
 let nomesConvidados = []
 let indiceEdicao = -1
+let indiceRemocao = -1
 let erros = []
 
 function salvar() {
@@ -81,7 +82,7 @@ function atualizarLista() {
                                              <button onclick="editar(${i})" class="btn btn-link">
                                              <img src="img/pencil.svg" width ="30px" alt="icone editar">
                                             </button> 
-                                               <button onclick="remover(${i})" class="btn btn-link">
+                                               <button onclick="remover(${i})" class="btn btn-link" data-toggle="modal" data-target="#alertaRemover">
                                                   <img src="img/trash.svg" width ="30px" alt="icone lixeira">
                                                </button> 
                                              </td>    
@@ -93,11 +94,7 @@ function atualizarLista() {
 }
 
 function remover(i) {
-    let tabela = document.getElementById("tabela")
-    nomesConvidados.splice(i, 1)
-    tabela.style.visibility = "hidden"
-    atualizarLista()
-
+    indiceRemocao = i;
 }
 
 function editar(i) {
@@ -105,6 +102,14 @@ function editar(i) {
     document.getElementById("nomeConvidado").value = nomesConvidados[i].nome
     document.getElementById("idadeConvidado").value = nomesConvidados[i].idade
     document.getElementById("emailConvidado").value = nomesConvidados[i].email
+
+}
+
+function confirmarRemocao() {
+    let tabela = document.getElementById("tabela")
+    nomesConvidados.splice(indiceRemocao, 1)
+    tabela.style.visibility = "hidden"
+    atualizarLista()
 
 }
 
